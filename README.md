@@ -7,6 +7,32 @@ A pure function is a function that has the following properties:
 - The function always evaluates the same result value given the same argument value(s). The function result value cannot depend on any hidden information or state that may change as program execution proceeds or between different executions of the program, nor can it depend on any external input from I/O devices.
 - Evaluation of the result does not cause any semantically observable side effect or output, such as mutation of mutable objects or output to I/O devices.
 - Evaluation of the result has no side effects.
+Examples of pure functions:
+```java
+public int sum(int a, int b) {
+    return a + b;
+}
+```
+```java
+public int multiply(int a, int b) {
+    return a * b;
+}
+```
+```java
+public int divide(int a, int b) {
+    return a / b;
+}
+```
+```java
+public int subtract(int a, int b) {
+    return a - b;
+}
+```
+```java
+public int square(int a) {
+    return a * a;
+}
+```
 ### What are the benefits of pure functions?
 - Pure functions are easier to reason about.
 - Pure functions are thread-safe.
@@ -25,10 +51,43 @@ A programming language is said to have first-class functions if it treats functi
 A higher-order function is a function that can take another function as an argument, or that returns a function as a result.
 ### What is a lambda expression?
 A lambda expression is a short block of code which takes in parameters and returns a value. Lambda expressions are similar to methods, but they do not need a name and they can be implemented right in the body of a method.
+Examples of lambda expressions:
+```java
+(int a, int b) -> a + b
+```
+```java
+(int a, int b) -> a * b
+```
+```java
+(int a, int b) -> a / b
+```
+```java
+(int a, int b) -> a - b
+```
+```java
+(int a) -> a * a
+```
 ### What is a closure?
 A closure is a function that captures the state of the surrounding environment.
+Example:
+```java
+public static void main(String[] args) {
+    int a = 10;
+    int b = 20;
+    int c = 30;
+    IntSupplier closure = () -> a + b + c;
+    System.out.println(closure.getAsInt());
+}
+```
 ### What is currying?
 Currying is the technique of translating the evaluation of a function that takes multiple arguments into evaluating a sequence of functions, each with a single argument.
+Example:
+```java
+public static void main(String[] args) {
+    IntBinaryOperator curriedSum = a -> b -> a + b;
+    System.out.println(curriedSum.applyAsInt(10).applyAsInt(20));
+}
+```
 ### What are the benefits of currying?
 - Currying helps you to avoid passing the same variable again and again.
 - Currying helps to create a higher-order function.
