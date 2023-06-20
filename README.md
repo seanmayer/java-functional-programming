@@ -67,6 +67,18 @@ Examples of lambda expressions:
 ```java
 (int a) -> a * a
 ```
+### Why use lambda expressions?
+- Lambda expressions are easy to read.
+- Lambda expressions are easy to write.
+- Lambda expressions are easy to test.
+- Lambda expressions are easy to debug.
+- Lambda expressions are easy to maintain.
+- Lambda expressions are easy to understand.
+- Lambda expressions are easy to extend.
+- Lambda expressions are easy to refactor.
+- Lambda expressions are easy to optimize.
+- Lambda expressions are easy to parallelize.
+
 ### What is a closure?
 A closure is a function that captures the state of the surrounding environment.
 Example:
