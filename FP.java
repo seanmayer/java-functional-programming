@@ -13,6 +13,7 @@ public class FP {
         printAllNumbersInListFuntional1(numbers);
         printEvenNumbersInListStructure(numbers);
         printEvenNumbersInListFunctional(numbers);
+        printEvenNumberInListLambda(numbers);
     }
 
     /**
@@ -80,6 +81,16 @@ public class FP {
      */
     private static boolean isEven(int number) {
         return number % 2 == 0;
+    }
+
+    /**
+     * Print even numbers in list functional lambda expression
+     * @param numbers
+     */
+    private static void printEvenNumberInListLambda(List<Integer> numbers) {
+        numbers.stream()
+                .filter(number -> number % 2 == 0)
+                .forEach(System.out::println);
     }
 
 }
