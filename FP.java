@@ -14,6 +14,19 @@ public class FP {
         printEvenNumbersInListStructure(numbers);
         printEvenNumbersInListFunctional(numbers);
         printEvenNumberInListLambda(numbers);
+        printOddNumbersInListFunctional(numbers);
+        List<String> courses = List.of("Spring", "Spring Boot", "API", "Microservices", "AWS", "PCF", "Azure", "Docker", "Kubernetes");
+
+        courses.stream()
+                .forEach(System.out::println);
+
+        courses.stream()
+                .filter(course -> course.contains("Spring"))
+                .forEach(System.out::println);
+
+        courses.stream()
+                .filter(course -> course.length() >= 4)
+                .forEach(System.out::println);
     }
 
     /**
@@ -90,6 +103,12 @@ public class FP {
     private static void printEvenNumberInListLambda(List<Integer> numbers) {
         numbers.stream()
                 .filter(number -> number % 2 == 0)
+                .forEach(System.out::println);
+    }
+
+    private static void printOddNumbersInListFunctional(List<Integer> numbers) {
+        numbers.stream()
+                .filter(number -> number % 2 != 0)
                 .forEach(System.out::println);
     }
 
