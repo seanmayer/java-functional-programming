@@ -106,6 +106,10 @@ public class FP {
                 .forEach(System.out::println);
     }
 
+    /**
+     * Print odd numbers in list functional
+     * @param numbers
+     */
     private static void printOddNumbersInListFunctional(List<Integer> numbers) {
         numbers.stream()
                 .filter(number -> number % 2 != 0)
