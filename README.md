@@ -147,3 +147,25 @@ A stream is a sequence of elements supporting sequential and parallel aggregate 
 - Streams are easy to refactor.
 - Streams are easy to optimize.
 - Streams are easy to parallelize.
+
+## What is class optional?
+A container object which may or may not contain a non-null value. If a value is present, isPresent() will return true and get() will return the value.
+Example:
+```java
+public static void main(String[] args) {
+    Optional<String> optional = Optional.of("Hello");
+    System.out.println(optional.isPresent());
+    System.out.println(optional.get());
+}
+```
+Why use optional?
+- Optional is easy to read.
+- Optional is easy to write.
+- Optional is easy to test.
+- Optional is easy to debug.
+- Optional is easy to maintain.
+- Optional is easy to understand.
+- Optional is easy to extend.
+- Optional is easy to refactor.
+- Optional is easy to optimize.
+- Optional is easy to parallelize.
